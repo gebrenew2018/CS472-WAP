@@ -127,7 +127,6 @@ img.right{
     border-radius: 10px;
 }
 .column{
-    vertical-align: auto;
     position: relative;
     width: 500px;
     columns: 2;
