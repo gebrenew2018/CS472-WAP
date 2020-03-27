@@ -32,8 +32,8 @@ h1 {
     grid-gap: 10px;
     padding: 20px;
 }
-#rotten {
-    background-image: url("../images/movi/rbg.png");
+.miniheader {
+    background-image: url("../images/movie/rbg.png");
     background-repeat: repeat-x;
     height: 83px;
 }
@@ -42,7 +42,7 @@ p > img {
     float: left;
     padding-right: 5px;
 }
-.review {
+.reviewer {
     overflow: hidden;
 }
 .comment {
@@ -60,7 +60,6 @@ p > img {
     font-weight: bold;
 }
 
-/* for the 33%  */
 span {
     color: red;
     font-size: 48pt;
@@ -75,11 +74,11 @@ span {
     font-family: Arial, "sans-serif";
 }
 
-#right {
+.right {
     margin: 0;
-     background-color: #a2b964;
+     background-color: #b9d862;
 }
-.lastParagraph{
+.bottom{
     background-color: #a2b964;
     text-align: center;
     height: 28px;
@@ -101,6 +100,7 @@ span {
     padding-right: 5px;
 }
 dt{
+
     margin-top: 10px;
     font-weight: bold;
 }
