@@ -1,167 +1,106 @@
-@media screen and (max-width: 800px) {
-    .left, .main, .right {
-      width: 100%; 
-    }
-  }
-  /* .banner{
-    width: 100%;
-    text-align: center;
-}
-body{
-    background-image: url("../images/movie/background.png");
+body {
+    margin: 0;
+    background-image: url('../images/movie/background.png');
+    padding: 0;
     font-size: 8pt;
+    font-family: Verdana, Tahoma, "sans-serif";
 }
-.main{
-    position: relative;
-    background-image: url("../images/movie/bannerbg.png");
-    text-align: center;
-    clear: left;
-}
-
-.content{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    clear: left;
-}
-   .header-section{
-    display: flex;
-    width: 800px;
-    position: absolute;
-    background-image: url("../images/movie/rbg.png");
-    background-repeat: repeat-x;
-}
-.header-section img{
-    float: left;
-}
-
-
 .container {
-    position: relative;
-    border: 4px solid gray;
+    margin: auto;
     width: 800px;
+    border: solid 4px gray;
     border-radius: 20px;
-    height: 400px;
-    background-color: #E8DC9B;
-  }
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 550px 250px;
   
-  .topright {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-  }
-  .overviewimg{
-      width: 30px;
-      height: 50px;
-  }
-  .bottomright {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    font-size: 18px;
-  }
- */
- body{
-     font-size: 8pt;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     background-image: url("../images/movie/background.png");
-     margin: 0px;
-     padding: 0px;
- }
- .banner{
-     background-image: url("../images/movie/bannerbg.png");
-     background-repeat: repeat-x;
-     text-align: center;
- }
- .banner img{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
- }
- h1{
-     font-size: 24pt;
-     font-weight: bold;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     text-shadow: 3px 3px #999999;
- }
- .content{
-     width: 800px;
-     height: 800px;
-     margin: auto;
-     position: relative;
-    border: 4px solid gray;
-    border-radius: 20px;
-    }
-    .left{
-        width: 550px;
-        float: left;
-        /* background-image: url("../images/movie/rbg.png"); */
-    }
-    img.left{
-        vertical-align: baseline;
-    }
-h2{
-    display: inline;
-    font-size: 48pt;
-    color: red;
 }
-.right{
-    width: 250px;
-    position: absolute;
-    right: 0px;
-    background-color:#A2B964;
-    font-size: 8pt;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    margin-left: 10px;
+#banner {
+    text-align: center;
+    background-image: url('../images/movie/bannerbg.png');
+    height: 50px;
 }
-img.right{
-    position: relative;
-    right: 0px;
-    bottom: 0px;
+h1 {
+    font-size: 24pt;
+    font-family: Tahoma, Verdana, serif;
+    text-shadow: 3px 3px #999999;
+    text-align: center;
 }
-.comment{
-    border: 2px solid gray;
-    font-size: 8pt;
-    background-color: #E8DC9B;
+.reviews {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+}
+#rotten {
+    background-image: url("../images/movi/rbg.png");
+    background-repeat: repeat-x;
+    height: 83px;
+}
+
+p > img {
+    float: left;
+    padding-right: 5px;
+}
+.review {
+    overflow: hidden;
+}
+.comment {
+    border: solid 2px gray;
+    padding-left: 4px;
     border-radius: 10px;
-}
-.column{
-    position: relative;
-    width: 500px;
-    columns: 2;
-    column-gap: 8px;
+    background-color: #E8DC9B;
+    min-height: 24px;
+    padding: 8px;
 }
 
-img.column{
-    vertical-align: baseline;
-}
-.box{
-    width: 245px;
-    flex-direction: column;
-    
-}
-img.box{
-    vertical-align: baseline;
-}
-.title{
-    font-size: 18pt;
-}
-.abc{
- background-image: url("../images/movie/rbg.png");
-
-}
-dd{
-
-}
-dt{
-    font-size: 10pt;
+.comment p {
+    text-indent: 4px;
+    font-size: 8pt;
     font-weight: bold;
 }
-.validator{
-    position: absolute;
-    right: 0px;
+
+/* for the 33%  */
+span {
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+    vertical-align: bottom;
 }
-.bottom{
-    text-align: left;
+
+.definition {
+    background-color: #a2b964;
+    font-size: 8pt;
+    padding: 0px 10px 10px 10px;
+    font-family: Arial, "sans-serif";
+}
+
+#right {
+    margin: 0;
+     background-color: #a2b964;
+}
+.lastParagraph{
+    background-color: #a2b964;
+    text-align: center;
+    height: 28px;
+}
+.addcolor{
+    background-color: #a2b964;
+}
+.comment p {
+    margin: 2px;
+    padding: 0px;
+}
+.validator {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 50%;
+}
+.reviewer img {
+    padding-right: 5px;
+}
+dt{
+    margin-top: 10px;
+    font-weight: bold;
 }
