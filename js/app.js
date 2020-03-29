@@ -114,5 +114,123 @@ console.log(maxOfThree(40,45,30)); // Output:  45
     let words =["the", "quick", "brown", "fox" ,"jumps", "over", "the", "lazy", "dog" ];
     console.log(filterLongWords(words,3)) // output: ["quick", "brown", "jumps", "over", "lazy"]
 
-
+    /**
+     * Q8: 	Write a function named, computeSumOfSquares, that takes as input, an array of numbers and calculates and 
+     *      returns the sum of the squares of each number in the input array. E.g. computeSumOfSquares([1,2,3]) should be computed as 12 + 22 +32 = 14. 
+     *      Note: Write your Javascript code without using Imperative programming. i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach.
+     */
+      function computeSumOfSquares(numbers) {
+        const result = numbers.map(function (elem, i, numbers) {
+            return elem * elem;
+        }).reduce(function (prev, elem, i, result) {
+            return prev + elem;
+        });
+        return result;
+    }
     
+    let nums = [1, 2, 3];
+    console.log(computeSumOfSquares(nums));// output: 14
+
+    /**
+     * Q9: Write a function named, printOddNumbersOnly, that takes as input, an array of integral numbers and it finds and prints only the numbers which are odd.
+     */
+
+    function printOddNumbersOnly(numbers) {
+      return numbers.filter(function (elem, i, numbers) {
+          return elem%2!==0;
+      });
+  }
+  
+  let nums = [1, 3, 3, 4, 5,6,6];
+  console.log(printOddNumbersOnly(nums));// output: [1, 3, 3, 5]
+
+  /**
+   * Q10: Write a function named, computeSumOfSquaresOfEvensOnly, that takes as input, an array of integral numbers and calculates and 
+   *      returns the sum of the squares of only the even numbers in the input array. E.g. computeSumOfSquaresOfEvensOnly ([1,2,3,4,5]) 
+   *      should be computed as 22 + 42 = 20.
+   */
+
+  function computeSumOfSquaresOfEvensOnly(numbers) {
+    return numbers.filter(function (elem, i, numbers) {
+        return elem % 2 === 0;
+    }).map(function (elem, i, numbers) {
+        return elem * elem;
+    }).reduce(function (prev, elem, i, numbers) {
+        return prev + elem;
+    });
+}
+
+let nums = [1, 2, 3, 4, 5,];
+console.log(computeSumOfSquaresOfEvensOnly(nums));// output: 20
+
+/**
+ * Q11: Using the Array.reduce(…) function, re-implement your functions, sum(…) and multiply(…) (defined in Problem 4 above) without using Imperative programming. 
+ *      i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach. 
+ */
+
+function sum(numbers) {
+  return numbers.reduce(function (prev, elem, i, numbers) {
+      return prev + elem;
+  });
+}
+
+
+function multiply(numbers) {
+  return numbers.reduce(function (prev, elem, i, numbers) {
+      return prev * elem;
+  });
+}
+
+let nums = [1, 2, 3, 4];
+console.log(sum(nums)) // Output: 10
+console.log(multiply(nums)) // Output: 24
+
+/**
+ * Q12: Implement Javascript code for a function named, findSecondBiggest, which takes as input, an array of numbers and finds and 
+ *      returns the second biggest of the numbers. For example, findSecondBiggest([1,2,3,4,5]) should return 4. And findSecondBiggest([19,9,11,0,12]) should return 12. 
+ *      (Note: Do not use sorting!)
+ */
+
+function findSecondBiggest(numbers) {
+  var max = Math.max.apply(null, numbers); 
+  numbers.splice(numbers.indexOf(max), 1); 
+  return Math.max.apply(null, numbers); 
+}
+
+
+let nums = [1, 2, 3, 5,4];
+console.log(findSecondBiggest(nums)) // Output: 4
+
+/**
+ * Q13.	Write a function named printFibo, that takes as input, a given length, n, and any two starting numbers a and b, and it prints-out the Fibonacci sequence, 
+ *      e.g. (0, 1, 1, 2, 3, 5, 8, 13, 21, 34,…) of the given length, beginning with a and b. (e.g. printFibo(n=1, a=0, b=1), prints-out: "0", 
+ *      as output; printFibo(n=2, a=0, b=1), prints-out: "0, 1", as output; printFibo(n=3, a=0, b=1), prints-out: "0, 1, 1", as output; printFibo(n=6, a=0, b=1), 
+ *      prints-out: "0, 1, 1, 2, 3, 5", as output; and printFibo(n=10, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5, 8, 13, 21, 34", as output).
+ */
+
+function fibonacci_series(number, a, b) {
+  let val;
+  if (number === 1) {
+      return [0];
+  }
+
+  if (number === 2) {
+      return [0, 1];
+  } else {
+      val = fibonacci_series(number - 1);
+      val.push(val[val.length - 1] + val[val.length - 2]);
+      return val;
+  }
+};
+
+console.log(fibonacci_series(6, 0, 1));// Output: [ 0, 1, 1, 2, 3, 5 ]
+
+/**
+ * Q14. 14.	Refer to your work on Lab Assignment 4. Add Javascript code to work with your 2 HTML forms as follows:
+
+          a.	Login Form: Add code such that when the Submit button is clicked, the values entered in the input fields are printed to the Console.
+          b.	New Product Form: Add code such that when the Submit button is clicked, the values entered in the input fields are displayed in a pop-up window.
+
+ */
+
+ console.log("https://gebrenew2018.github.io/CS472-WAP/product/index.html")
