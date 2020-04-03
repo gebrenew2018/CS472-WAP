@@ -1,0 +1,13 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.legend{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+#txtarea{
+text-align: right;
+font-size: 12pt;
+}
